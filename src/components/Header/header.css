@@ -1,0 +1,20 @@
+
+.header-wrapper{
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-desaturated-blue);
+}
+.header-title{
+    font-size: clamp(3.5rem,7vw,5rem);
+    font-weight: 600;
+    color: var(--neutral-pale-blue);
+}
+.nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}

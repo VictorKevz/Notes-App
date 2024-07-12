@@ -1,0 +1,74 @@
+.notes-wrapper {
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  padding: 0 2rem 3rem 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+.note {
+  min-height: fit-content;
+  background-color: var(--neutral-desaturated-blue);
+  border-radius: 0.64rem;
+  padding: 3rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  cursor: pointer;
+}
+.note:hover {
+  transform: scale(1.1);
+}
+.note:nth-child(even) {
+  border-top: 4px solid var(--primary-light-red-work);
+}
+.note:nth-child(odd) {
+  border-top: 4px solid var(--primary-lime-green-exercise);
+}
+.note:nth-child(3) {
+  border-top: 4px solid var(--primary-soft-orange-self-care);
+}
+.note:nth-child(4) {
+  border-top: 4px solid white;
+}
+.note-title {
+  font-size: clamp(1.5rem, 7vw, 3rem);
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+.note-message {
+  font-weight: 300;
+  margin-top: 1rem;
+}
+.delete-icon-container {
+  margin-top: -1rem;
+  display: flex;
+  align-self: flex-end;
+}
+.delete-icon {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s ease-in;
+}
+.delete-icon:hover {
+  transform: scale(1.1);
+}
+@media (width <= 1140px) {
+  .notes-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (width <= 930px) {
+  .notes-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 595px) {
+  .notes-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
